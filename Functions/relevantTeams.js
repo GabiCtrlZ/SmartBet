@@ -1,3 +1,3 @@
 const relevantTeams = function (leagueName) {
-    const premierLeague = ["Man City", "Liverpool", ""]
+    const premierLeague = ["Man City", "Liverpool", "Chelsea",""]
 }

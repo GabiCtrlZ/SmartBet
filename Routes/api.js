@@ -11,9 +11,9 @@ router.get('/try/:league', function (req, res) {
     })
 })
 
-router.post('/calc', async function (req, res) {
+router.post('/calc', function (req, res) {
     const data = req.body
-    const result = await calcExpectedGoals(data.league, data.homeTeam, data.awayTeam)
+    const result = calcExpectedGoals(data.league, data.homeTeam, data.awayTeam)
     console.log(result)
 })
 

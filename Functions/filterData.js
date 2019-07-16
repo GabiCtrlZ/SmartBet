@@ -4,6 +4,7 @@ let awayGames = {}
 class HomeStats{
     constructor(name) {
         this.name = name
+        this.place = 'Home'
         this.goalsAgainst = 0
         this.goalsFor = 0
         this.rivalteams = []
@@ -13,6 +14,7 @@ class HomeStats{
 class AwayStats{
     constructor(name) {
         this.name = name
+        this.place = 'Away'
         this.goalsAgainst = 0
         this.goalsFor = 0
         this.rivalteams = []

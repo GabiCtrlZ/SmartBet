@@ -29,6 +29,7 @@ body {
 }
 .league{
     cursor: pointer;
+    /* border-bottom: 1px solid wheat; */
 }
 .data{
     display: grid;
@@ -43,27 +44,34 @@ body {
 .input{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: grey;
+     background-color: grey;
+    /* height: 20px;
+    width: 40px; */
 }
 .data2{
-    background-color: purple;
+    background : #6b48ff;
     display: grid ;
     grid-template-columns: repeat(10 , 1fr) ;
+    border: 3px solid black;
 }
 .form{
     display: inline-block;
 }
 .bar{
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left:20px;
     border-radius: 10px;
     border:0 ;
 }
 .button{
-    margin-top : 10px;
+    width: 75px;
+    height: 30px;
+    margin-top : 5px;
     border-radius: 15px;
     border:0 ;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 15px rgb(197, 197, 197);
+    background-color: #0d3f67;
+    color: wheat;
 }
 .button:active {
     transform:  translateY(2px);
@@ -74,6 +82,23 @@ body {
     padding:10px;
     margin-left:50px;
 }
-.data2{
-    background : #6b48ff;
+#homeTeam{
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    color:blue;
+}
+#awayTeam{
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    color: crimson;
+}
+.chance{
+    color:white;
+    font-weight: bold;
+    border: 1px solid black;
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }

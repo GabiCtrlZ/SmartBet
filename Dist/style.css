@@ -1,0 +1,50 @@
+body {
+    margin: 0 auto;
+    width: auto;
+    max-width: 1024px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+}
+
+.logoAndList {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+.logo {
+    background-color: aqua;
+}
+
+.list {
+    background-color: green;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+.league{
+    cursor: pointer;
+}
+.data{
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 7fr;
+}
+.name{
+    background-color: black;
+    color:white;
+}
+.input{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: grey;
+}
+.data2{
+    background-color: purple;
+}
+.form{
+    display: inline-block;
+}

@@ -10,6 +10,7 @@ $('body').on('click', '.league', function () {
 })
 
 $('body').on('click', '.button', function () {
+
     const data = {
         homeTeam: $('#homeTeam').val(),
         awayTeam: $('#awayTeam').val(),

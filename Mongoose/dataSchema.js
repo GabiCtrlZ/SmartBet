@@ -15,5 +15,5 @@ const ItalySerieA = mongoose.model('ItalySerieA', dataSchema)
 const EnglandPremierLeauge = mongoose.model('EnglandPremierLeauge', dataSchema)
 const SpainLaLiga = mongoose.model('SpainLaLiga', dataSchema)
 
-module.exports = {ItalySerieA, EnglandPremierLeauge, SpainLaLiga}
+module.exports = {"Seria-A": ItalySerieA, "Premier-Leauge": EnglandPremierLeauge, "La-Liga": SpainLaLiga}
 

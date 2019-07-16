@@ -3,8 +3,8 @@ $('body').on('click', '.league', function () {
     $('.input').empty()
     $('.name').html(`${$(this).text()}`)
     $('.input').append(`
-        <div class=form><input type=text></div>
-        <div class=form><input type=text></div>
-        <div class=form><button>Click</button></div>
+        <div class=form><input type=text class="bar" placeholder="Home Team"></div>
+        <div class=form><input type=text class="bar" placeholder="Against Team"></div>
+        <div class=form><button class="button">Click</button></div>
     `)
 })

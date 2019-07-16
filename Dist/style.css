@@ -2,6 +2,7 @@ body {
     margin: 0 auto;
     width: auto;
     max-width: 1024px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .main {
@@ -16,11 +17,11 @@ body {
 }
 
 .logo {
-    background-color: aqua;
+    background-color: #f2f4f6;
 }
 
 .list {
-    background-color: green;
+    background-color: #1ee3cf;
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
@@ -36,6 +37,8 @@ body {
 .name{
     background-color: black;
     color:white;
+    font-size: 50px;
+    
 }
 .input{
     display: grid;
@@ -47,4 +50,28 @@ body {
 }
 .form{
     display: inline-block;
+}
+.bar{
+    margin-top: 10px;
+    margin-left:20px;
+    border-radius: 10px;
+    border:0 ;
+}
+.button{
+    margin-top : 10px;
+    border-radius: 15px;
+    border:0 ;
+    box-shadow: 0px 0px 10px black;
+}
+.button:active {
+    transform:  translateY(2px);
+}
+.fa-futbol{
+    height: 30px;
+    font-size: 70px;
+    padding:10px;
+    margin-left:50px;
+}
+.data2{
+    background : #6b48ff;
 }

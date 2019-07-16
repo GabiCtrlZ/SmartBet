@@ -12,3 +12,5 @@ const relevantTeams = function (leagueName) {
         return laLiga
     }
 }
+
+module.exports = relevantTeams

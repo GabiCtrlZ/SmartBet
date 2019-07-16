@@ -47,6 +47,8 @@ body {
 }
 .data2{
     background-color: purple;
+    display: grid ;
+    grid-template-columns: repeat(10 , 1fr) ;
 }
 .form{
     display: inline-block;

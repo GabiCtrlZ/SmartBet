@@ -20,4 +20,6 @@ promiseData.then(function(data){
         teamA.save()
         teamH.save()
     }
+    let avg = new dataModels['Seria-A']({name: 'allAvg', avgFor: filtered.avg.avgHome.avgHomeFor, avgAgainst: filtered.avg.avgHome.avgHomeAgainst })
+    avg.save()
 })

@@ -1,7 +1,7 @@
 const express = require('express')
 const dataModels = require('../Mongoose/dataSchema')
 const router = express.Router()
-
+const update = require('../Functions/exep')
 
 router.get('/try/:league' , function(req , res){
     const league = req.params.league
@@ -10,8 +10,9 @@ router.get('/try/:league' , function(req , res){
     })
 })
 
-router.get('/admin', function(req, res){
-    
+router.get('/admin/:league', function(req, res){
+    update(req.params.league)
+    res.end()
 })
 
 

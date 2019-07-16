@@ -15,8 +15,8 @@ promiseData.then(function(data){
     console.log(filtered.awayGames)
     console.log(filtered.avg)
     for (let key in filtered.homeGames){
-        let teamH = new dataModels.ItalySerieA(filtered.homeGames[key])
-        let teamA = new dataModels.ItalySerieA(filtered.awayGames[key])
+        let teamH = new dataModels["Seria-A"](filtered.homeGames[key])
+        let teamA = new dataModels["Seria-A"](filtered.awayGames[key])
         teamA.save()
         teamH.save()
     }

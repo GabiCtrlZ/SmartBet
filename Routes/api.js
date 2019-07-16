@@ -3,6 +3,7 @@ const dataModels = require('../Mongoose/dataSchema')
 const router = express.Router()
 const update = require('../Functions/exep')
 const calcExpectedGoals = require('../Functions/calcExpectedGoals')
+const arrRusults = require('../Functions/arrResults')
 
 router.get('/try/:league', function (req, res) {
     const league = req.params.league
@@ -15,6 +16,8 @@ router.post('/calc', async function (req, res) {
     const data = req.body
     const result = await calcExpectedGoals(data.league, data.homeTeam, data.awayTeam)
     console.log(result)
+    const arr = arrRusults(result)
+    res.send(arr)
 })
 
 router.get('/admin/:league', function (req, res) {

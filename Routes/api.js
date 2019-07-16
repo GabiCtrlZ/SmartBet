@@ -10,4 +10,9 @@ router.get('/try/:league' , function(req , res){
     })
 })
 
+router.get('/admin/:league', function(req, res){
+    
+})
+
+
 module.exports = router

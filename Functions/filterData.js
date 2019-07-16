@@ -1,3 +1,6 @@
+let homeGames = {}
+let awayGames = {}
+
 class HomeStats{
     constructor(name) {
         this.name = name
@@ -40,8 +43,8 @@ function starilaizeData(data, playingTeams){
 }
 
 function filterData(data, playingTeams){
-    let homeGames = {}
-    let awayGames = {}
+    homeGames = {}
+    awayGames = {}
     initialize(playingTeams)
     starilaizeData(data, playingTeams)
     return {homeGames, awayGames}

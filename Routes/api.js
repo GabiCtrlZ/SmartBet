@@ -12,7 +12,7 @@ router.get('/try/:league' , function(req , res){
 
 router.get('/admin/:league', function(req, res){
     update(req.params.league)
-    res.end()
+    res.send('updated successfully')
 })
 
 

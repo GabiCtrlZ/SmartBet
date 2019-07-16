@@ -42,12 +42,31 @@ function starilaizeData(data, playingTeams){
     }
 }
 
+function avg(playingTeams){
+    let avgHomeFor = 0
+    let avgHomeAgainst = 0 
+
+    for (let team in homeGames){
+        homeGames[team].avgFor = homeGames[team].goalsFor / homeGames[team].rivalteams.length
+        homeGames[team].avgAgainst = homeGames[team].goalsAgainst / homeGames[team].rivalteams.length
+        avgHomeFor += homeGames[team].avgFor
+        avgHomeAgainst += homeGames[team].avgAgainst
+    }
+    for (let team in awayGames){
+        awayGames[team].avgFor = awayGames[team].goalsFor / awayGames[team].rivalteams.length
+        awayGames[team].avgAgainst = awayGames[team].goalsAgainst / awayGames[team].rivalteams.length
+    }
+    return {
+        avgHome: {avgHomeFor: avgHomeFor/playingTeams.length, avgHomeAgainst: avgHomeAgainst/playingTeams.length}
+    }
+}
+
 function filterData(data, playingTeams){
     homeGames = {}
     awayGames = {}
     initialize(playingTeams)
     starilaizeData(data, playingTeams)
-    return {homeGames, awayGames}
+    return {homeGames, awayGames, avg: avg(playingTeams)}
 }
 
 module.exports = filterData

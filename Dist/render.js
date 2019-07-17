@@ -94,7 +94,43 @@ const render = function (arr) {
                         <div>${(100 - calculator.under55Goals(arr)).toFixed(2) + "%"}</div>
                     </div>
                 </div>
-        </div>        
+        </div>  
+
+
+
+        <div>         
+            <div class="ftrLabel">Exact Goals</div>
+                <div class="ftr">
+                    <div>
+                        <div>0 - </div>
+                        <div>${(calculator.exact0(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>1 - </div>
+                        <div>${(calculator.exact1(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>2 - </div>
+                        <div>${(calculator.exact2(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>3 - </div>
+                        <div>${(calculator.exact3(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>4 - </div>
+                        <div>${(calculator.exact4(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>5 - </div>
+                        <div>${(calculator.exact5(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>6+ - </div>
+                        <div>${(calculator.biggerEqual6(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                </div>
+        </div>       
     </div>
     `)
 }

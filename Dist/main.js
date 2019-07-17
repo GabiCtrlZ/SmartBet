@@ -5,24 +5,21 @@ $('body').on('click', '.league', function () {
     $('.name').html(`${$(this).text()}`)
     const leauge = $(this).text().replace(" ", "-")
     $.get(`/teams/${leauge}`, function (res) {
-        $('.input').append(`<select id=${leauge}></select>`)
+        $('.input').append(`<select id=team1></select>`)
+        $('.input').append(`<select id=team2></select>`)
         for (let i of res) {
-            $(`#${leauge}`).append(`<option value=${i}>${i}</option>`)
+            $(`#team1`).append(`<option value=${i}>${i}</option>`)
+            $(`#team2`).append(`<option value=${i}>${i}</option>`)
         }
         $('.input').append(`<div class=form><button class="button">Click</button></div>`)
     })
-    // $('.input').append(`
-    //     <div class=form><input type=text id="homeTeam" class="bar" value="Roma" placeholder="Home Team"></div>
-    //     <div class=form><input type=text id="awayTeam" class="bar" value="Milan" placeholder="Against Team"></div>
-    //     <div class=form><button class="button">Click</button></div>
-    // `)
 })
 
 $('body').on('click', '.button', function () {
 
     const data = {
-        homeTeam: $('#homeTeam').val(),
-        awayTeam: $('#awayTeam').val(),
+        homeTeam: $("#team1 option:selected").text(),
+        awayTeam: $("#team2 option:selected").text(),
         league: $(this).closest('.data').find('.name').text().replace(" ", "-")
     }
     $.post('/calc', data, function (res) {

@@ -62,7 +62,7 @@ const render = function (arr) {
             </div>
         </div>
         <div class="card">
-            <a href="#" class="myButton calcOdds">My Chance</a>
+            <a class="myButton calcOdds">My Chance</a>
             <a class="myButton deleteButton"><i class="fas fa-trash"></i></a>
         </div>
     </div>

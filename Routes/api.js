@@ -5,6 +5,8 @@ const update = require('../Functions/exep')
 const calcExpectedGoals = require('../Functions/calcExpectedGoals')
 const arrRusults = require('../Functions/arrResults')
 const Base64 = require('../Functions/base64')
+const key = require('./key')
+const updateTeams = require('../Functions/updateTeams')
 
 router.get('/try/:league', function (req, res) {
     const league = req.params.league
@@ -21,17 +23,22 @@ router.post('/calc', async function (req, res) {
     res.send(arr)
 })
 
-router.get('/admin/:league', function (req, res) {
-    update(req.params.league)
-    res.send('updated successfully')
+router.get(`/admin/up/${Base64.encode(key)}/:league`, function (req, res) {
+    const league = req.params.league
+    if (league == 'Premier-Leauge' || league == 'Seria-A' || league == "La-Liga"){
+    update(league)
+    return res.send('updated successfully')
+    }
+    res.send('wrong input')
 })
 
-router.get('/admintry', function(req, res){
-    const key = req.query.key 
-    if (key == Base64.encode('Kazoon')){
-        return res.sendFile(path.join(__dirname + '/..'+'/Admin/index.html'))
+router.post(`/admin/upTeams/${Base64.encode(key)}`, function (req, res) {
+    const data = req.body
+    if (data.league == 'Premier-Leauge' || data.league == 'Seria-A' || data.league == "La-Liga"){
+        updateTeams(data.league, JSON.parse(data.teamsArr))
+    return res.send('updated successfully')
     }
-    return res.send('sorry')
+    res.send('wrong input')
 })
 
 

@@ -40,6 +40,6 @@ $('body').on('click', '.fa-trash', function () {
 
 $.get('/allTeams' , function(res){
     for(let i of res){
-        $('.list').append(i)
+        $('.list').append(`<div class="league">${i}</div>`)
     }
 })

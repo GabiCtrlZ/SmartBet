@@ -135,6 +135,7 @@ body {
     text-align: center;
     background-color: green;
     font-weight: bold;
+    font-size:25px;
 }
 .ftr div{
     display: inline-block;
@@ -146,4 +147,5 @@ body {
     align-items: center;
     background-color: grey;
     font-weight: bold;
+    font-size:20px;
 }

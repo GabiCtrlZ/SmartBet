@@ -41,5 +41,11 @@ router.post(`/admin/upTeams/${Base64.encode(key)}`, function (req, res) {
     return res.send('updated successfully')
 })
 
+router.get('/teams/:league', async function(req, res){
+    const league = req.params.league
+    const leagueStuff = await dataModels.Relevant.findOne({name: league})
+    res.send(leagueStuff.relevantTeams)
+})
+
 
 module.exports = router

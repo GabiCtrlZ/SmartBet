@@ -1,6 +1,7 @@
 $('body').on('click', '.league', function () {
     $('.name').empty()
     $('.input').empty()
+    $('.data2').empty()
     $('.name').html(`${$(this).text()}`)
     $('.input').append(`
         <div class=form><i class="fas fa-trash"></i></div>

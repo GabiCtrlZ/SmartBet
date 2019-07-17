@@ -3,8 +3,9 @@ $('body').on('click', '.league', function () {
     $('.input').empty()
     $('.name').html(`${$(this).text()}`)
     $('.input').append(`
-        <div class=form>  <i class="fas fa-trash"></i><input type=text id="homeTeam" class="bar" placeholder="Home Team"></div>
-        <div class=form><input type=text id="awayTeam" class="bar" placeholder="Against Team"></div>
+        <div class=form><i class="fas fa-trash"></i></div>
+        <div class=form><input type=text id="homeTeam" class="bar" value="Roma" placeholder="Home Team"></div>
+        <div class=form><input type=text id="awayTeam" class="bar" value="Milan" placeholder="Against Team"></div>
         <div class=form><button class="button">Click</button></div>
     `)
 })
@@ -32,7 +33,7 @@ $('body').on('keypress', '#awayTeam', function (event) { // I CANT PRESS ENTER A
     }
 })
 
-$('body').on('click' , '.fa-trash' ,function(){
+$('body').on('click', '.fa-trash', function () {
     $('#homeTeam').val('')
     $('#awayTeam').val('')
 })

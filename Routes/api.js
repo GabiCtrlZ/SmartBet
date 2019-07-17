@@ -23,16 +23,16 @@ router.post('/calc', async function (req, res) {
     res.send(arr)
 })
 
-router.get(`/admin/up/${Base64.encode(key)}/:league`, function (req, res) {
+router.get(`/admin/up/${Base64.encode(key)}/:league`, async function (req, res) {
     const league = req.params.league
     if (league == 'Premier-Leauge' || league == 'Seria-A' || league == "La-Liga"){
-    update(league)
+    await update(league)
     return res.send('updated successfully')
     }
     res.send('wrong input')
 })
 
-router.post(`/admin/upTeams/${Base64.encode(key)}`, function (req, res) {
+router.post(`/admin/upTeams/${Base64.encode(key)}`,function (req, res) {
     const data = req.body
     if (data.league == 'Premier-Leauge' || data.league == 'Seria-A' || data.league == "La-Liga"){
         updateTeams(data.league, JSON.parse(data.teamsArr))

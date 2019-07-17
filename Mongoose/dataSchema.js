@@ -16,10 +16,16 @@ const relevantTeamsSchema = new Schema({
     relevantTeams: [String]
 })
 
-const ItalySerieA = mongoose.model('ItalySerieA', dataSchema)
-const EnglandPremierLeauge = mongoose.model('EnglandPremierLeauge', dataSchema)
-const SpainLaLiga = mongoose.model('SpainLaLiga', dataSchema)
 const RelevantTeams = mongoose.model('RelevantTeams', relevantTeamsSchema)
 
-module.exports = {"Seria-A": ItalySerieA, "Premier-Leauge": EnglandPremierLeauge, "La-Liga": SpainLaLiga, "Relevant": RelevantTeams}
+async function updateModels() {
+    let temp = {"Relevant": RelevantTeams, updateModels}
+    const teams = await RelevantTeams.find({})
+    for(let team of teams){
+        temp[team.name] = mongoose.model(team.name, dataSchema, team.name)
+    }
+    module.exports = temp    
+}
 
+
+module.exports = {updateModels}

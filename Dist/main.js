@@ -37,3 +37,4 @@ $('body').on('click', '.fa-trash', function () {
     $('#homeTeam').val('')
     $('#awayTeam').val('')
 })
+

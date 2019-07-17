@@ -4,15 +4,17 @@ const mongoose = require("mongoose")
 const path = require('path')
 const bodyParser = require('body-parser')
 const api = require('./Routes/api')
+const Base64 = require('./Functions/base64')
+const key = require('./Routes/key')
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/soccarDB' ,  { useNewUrlParser: true })
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.static(path.join(__dirname, 'node_modules')))
 app.use(express.static(path.join(__dirname, 'dist')))
 app.use('/', api)
-
+app.use(`/admin/${Base64.encode(key)}`, express.static(path.join(__dirname, 'Admin')));
 
 
 // The Server is Listning

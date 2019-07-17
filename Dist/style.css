@@ -16,27 +16,11 @@ body {
     font-size: 2vw;
 }
 
-.main {
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-}
-
-.logoAndList {
-    display: grid;
-}
-
-.logo {
-    background-color: #f2f4f6;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
 .list {
     font-weight: bold;
     color: white;
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
     background: rgba(17, 143, 32, 0.75);
@@ -44,11 +28,6 @@ body {
 
 .league {
     cursor: pointer;
-}
-
-.data {
-    display: grid;
-    grid-template-rows: 1fr 0.5fr 7fr;
 }
 
 .name {
@@ -69,9 +48,7 @@ body {
 }
 
 .data2 {
-    /* background : #6b48ff; */
     display: grid;
-    border: 3px solid black;
     background: rgba(46, 80, 72, 0.5);
 }
 
@@ -120,15 +97,6 @@ body {
     font-weight: bold;
 }
 
-.chance {
-    color: white;
-    font-weight: bold;
-    border: 1px solid black;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
 .render {
     display: grid;
     grid-template-columns: 1fr;
@@ -145,8 +113,9 @@ body {
     align-items: center;
     grid-gap: 10px;
 }
-.label{
-    color:white;
+
+.label {
+    color: white;
 }
 
 .card {

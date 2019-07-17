@@ -7,6 +7,7 @@ const arrRusults = require('../Functions/arrResults')
 const Base64 = require('../Functions/base64')
 const key = require('./key')
 const updateTeams = require('../Functions/updateTeams')
+const downloadFunc = require('../Functions/download')
 
 router.get('/try/:league', function (req, res) {
     const league = req.params.league
@@ -47,5 +48,10 @@ router.get('/teams/:league', async function(req, res){
     res.send(leagueStuff.relevantTeams)
 })
 
+router.post(`admin/down/${Base64.encode(key)}`, function(req, res){
+    const data = req.body
+    downloadFunc(data.url, data.fileName)
+    res.send('Downloaded')
+})
 
 module.exports = router

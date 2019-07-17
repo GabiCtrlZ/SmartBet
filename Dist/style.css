@@ -5,7 +5,6 @@ html {
 body {
     margin: 0 auto;
     width: auto;
-    max-width: 1024px;
     font-family: 'Quicksand', sans-serif;
     background: url('https://images.unsplash.com/photo-1430232324554-8f4aebd06683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
     height: 100%;
@@ -14,39 +13,17 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size: 12px;
-}
-.main{
-    height: 100%;
-}
-
-@media (min-width:600px) {
-    body {
-        font-size: 16px;
-    }
-}
-
-@media (min-width:800px) {
-    body {
-        font-size: 18px;
-    }
-}
-
-@media (min-width:1000px) {
-    body {
-        /* Never get larger than this */
-        font-size: 20px;
-    }
+    font-size: 2vw;
 }
 
 .main {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    height: 100vh;
 }
 
 .logoAndList {
     display: grid;
-    grid-template-rows: 1fr 7fr;
 }
 
 .logo {
@@ -58,11 +35,12 @@ body {
 
 .list {
     font-weight: bold;
-    background-color: #1ee3cf;
+    color: white;
     display: grid;
     grid-template-rows: auto;
     justify-items: center;
     align-items: center;
+    background: rgba(17, 143, 32, 0.75);
 }
 
 .league {
@@ -75,7 +53,7 @@ body {
 }
 
 .name {
-    background-color: black;
+    background-color: grey;
     color: white;
     font-size: 50px;
     display: grid;
@@ -85,8 +63,8 @@ body {
 
 .input {
     display: grid;
-    grid-template-columns: 0.1fr 1fr 1fr 1fr;
-    background-color: grey;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #32ff6a;
     justify-items: center;
     align-items: center;
 }
@@ -111,7 +89,7 @@ body {
 }
 
 .button {
-    width: 100px;
+    width: 22vw;
     height: 30px;
     border-radius: 15px;
     border: 0;
@@ -125,20 +103,22 @@ body {
     transform: translateY(2px);
 }
 
-.fa-futbol {
-    font-size: 70px;
-}
-
 #homeTeam {
+    width: 22vw;
     height: 30px;
     color: blue;
     outline: none;
+    text-align: center;
+    font-weight: bold;
 }
 
 #awayTeam {
+    width: 22vw;
     height: 30px;
     color: crimson;
     outline: none;
+    text-align: center;
+    font-weight: bold;
 }
 
 .chance {
@@ -166,15 +146,17 @@ body {
     align-items: center;
     grid-gap: 10px;
 }
-
-.label {
-    font-size: 20px;
+.label{
+    color:white;
 }
 
 .card {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: grey;
+    background-color: rgb(92, 240, 109);
+    box-shadow: 0px 0px 10px white;
     font-weight: bold;
+    border-radius: 15px;
+    padding: 15px;
 }

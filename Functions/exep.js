@@ -5,7 +5,8 @@ let dataModels = require('../Mongoose/dataSchema')
 async function updateByLeagueName(league) {
     await dataModels.updateModels()
     dataModels = require('../Mongoose/dataSchema')
-    if (league == 'Premier-Leauge' || league == 'Seria-A' || league == "La-Liga") {
+    const allNameArr = await dataModels.Relevant.find({})
+    if (allNameArr.some(x => x.name == league)) {
         await dataModels[league].remove({})
         let playingteams = await dataModels.Relevant.findOne({name: league})
         playingteams = playingteams.relevantTeams

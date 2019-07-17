@@ -3,11 +3,19 @@ $('body').on('click', '.league', function () {
     $('.input').empty()
     $('.data2').empty()
     $('.name').html(`${$(this).text()}`)
-    $('.input').append(`
-        <div class=form><input type=text id="homeTeam" class="bar" value="Roma" placeholder="Home Team"></div>
-        <div class=form><input type=text id="awayTeam" class="bar" value="Milan" placeholder="Against Team"></div>
-        <div class=form><button class="button">Click</button></div>
-    `)
+    const leauge = $(this).text().replace(" ", "-")
+    $.get(`/teams/${leauge}`, function (res) {
+        $('.input').append(`<select id=${leauge}></select>`)
+        for (let i of res) {
+            $(`#${leauge}`).append(`<option value=${i}>${i}</option>`)
+        }
+        $('.input').append(`<div class=form><button class="button">Click</button></div>`)
+    })
+    // $('.input').append(`
+    //     <div class=form><input type=text id="homeTeam" class="bar" value="Roma" placeholder="Home Team"></div>
+    //     <div class=form><input type=text id="awayTeam" class="bar" value="Milan" placeholder="Against Team"></div>
+    //     <div class=form><button class="button">Click</button></div>
+    // `)
 })
 
 $('body').on('click', '.button', function () {
@@ -18,11 +26,6 @@ $('body').on('click', '.button', function () {
         league: $(this).closest('.data').find('.name').text().replace(" ", "-")
     }
     $.post('/calc', data, function (res) {
-
-        for (let i of res) {
-            let div =
-                $('.data2').append(`<div class="chance">${i.chance.toFixed(5) + ' '} </div>`)
-        }
         render(res)
     })
 })

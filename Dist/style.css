@@ -4,7 +4,7 @@ html {
 
 body {
     margin: 0 auto;
-    min-width: 700px;
+    width: auto;
     max-width: 1024px;
     font-family: 'Quicksand', sans-serif;
     background: url('https://images.unsplash.com/photo-1430232324554-8f4aebd06683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
@@ -14,13 +14,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size: 14px;
+    font-size: 12px;
 }
-
-@media (min-width:500px) {
-    body {
-        font-size: 15px;
-    }
+.main{
+    height: 100%;
 }
 
 @media (min-width:600px) {
@@ -60,6 +57,7 @@ body {
 }
 
 .list {
+    font-weight: bold;
     background-color: #1ee3cf;
     display: grid;
     grid-template-rows: auto;
@@ -89,6 +87,8 @@ body {
     display: grid;
     grid-template-columns: 0.1fr 1fr 1fr 1fr;
     background-color: grey;
+    justify-items: center;
+    align-items: center;
 }
 
 .data2 {
@@ -106,8 +106,6 @@ body {
 }
 
 .bar {
-    margin-top: 5px;
-    margin-left: 20px;
     border-radius: 10px;
     border: 0;
 }
@@ -133,16 +131,12 @@ body {
 
 #homeTeam {
     height: 30px;
-    width: 200px;
-    font-size: 15px;
     color: blue;
     outline: none;
 }
 
 #awayTeam {
     height: 30px;
-    width: 200px;
-    font-size: 15px;
     color: crimson;
     outline: none;
 }
@@ -162,7 +156,7 @@ body {
     justify-items: center;
     align-items: center;
     padding: 20px;
-    grid-gap:50px;
+    grid-gap: 50px;
 }
 
 .information {
@@ -172,9 +166,11 @@ body {
     align-items: center;
     grid-gap: 10px;
 }
-.label{
-    font-size:20px;
+
+.label {
+    font-size: 20px;
 }
+
 .card {
     display: grid;
     justify-items: center;

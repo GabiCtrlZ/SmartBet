@@ -86,4 +86,60 @@ class Calculator {
         }
         return sum
     }
+    exact0(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 0))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact1(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 1))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact2(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 2))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact3(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 3))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact4(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 4))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact5(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 5))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    biggerEqual6(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals >= 6))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
 }

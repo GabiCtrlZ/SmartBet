@@ -126,8 +126,16 @@ const render = function (arr) {
                         <div>${(calculator.exact5(arr)).toFixed(2) + "%"}</div>
                     </div>
                     <div>
-                        <div>6+ - </div>
-                        <div>${(calculator.biggerEqual6(arr)).toFixed(2) + "%"}</div>
+                        <div>6 - </div>
+                        <div>${(calculator.exact6(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>7 - </div>
+                        <div>${(calculator.exact7(arr)).toFixed(2) + "%"}</div>
+                    </div>
+                    <div>
+                        <div>8 - </div>
+                        <div>${(calculator.exact8(arr)).toFixed(2) + "%"}</div>
                     </div>
                 </div>
         </div>       

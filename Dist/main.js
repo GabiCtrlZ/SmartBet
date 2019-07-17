@@ -4,7 +4,6 @@ $('body').on('click', '.league', function () {
     $('.data2').empty()
     $('.name').html(`${$(this).text()}`)
     $('.input').append(`
-        <div class=form><i class="fas fa-trash"></i></div>
         <div class=form><input type=text id="homeTeam" class="bar" value="Roma" placeholder="Home Team"></div>
         <div class=form><input type=text id="awayTeam" class="bar" value="Milan" placeholder="Against Team"></div>
         <div class=form><button class="button">Click</button></div>

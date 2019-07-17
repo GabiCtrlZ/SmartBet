@@ -16,7 +16,6 @@ $('body').on('click', '.league', function () {
 })
 
 $('body').on('click', '.button', function () {
-
     const data = {
         homeTeam: $("#team1 option:selected").text(),
         awayTeam: $("#team2 option:selected").text(),
@@ -31,11 +30,6 @@ $('body').on('keypress', '#awayTeam', function (event) { // I CANT PRESS ENTER A
     if (event.keyCode == 13) {
         $('.button').click()
     }
-})
-
-$('body').on('click', '.fa-trash', function () {
-    $('#homeTeam').val('')
-    $('#awayTeam').val('')
 })
 
 $('body').on('click', '.calcOdds', function () {
@@ -54,6 +48,11 @@ $('body').on('click', '.calcOdds', function () {
             $(i).parent().find('.result').html((result * 100).toFixed(2))
         }
     }
+})
+
+$('body').on('click', '.deleteButton', function () {
+    $('.odds').val("")
+    $('.result').empty()
 })
 
 

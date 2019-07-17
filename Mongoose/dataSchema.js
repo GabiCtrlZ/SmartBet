@@ -28,4 +28,4 @@ async function updateModels() {
 }
 
 
-module.exports = {updateModels}
+module.exports = {updateModels, "Relevant": RelevantTeams}

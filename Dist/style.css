@@ -133,7 +133,6 @@ body {
 
 .ftrLabel{
     text-align: center;
-    background-color: green;
     font-weight: bold;
     font-size:25px;
 }
@@ -148,4 +147,7 @@ body {
     background-color: grey;
     font-weight: bold;
     font-size:20px;
+}
+.card-content{
+    font-size: 1vw;
 }

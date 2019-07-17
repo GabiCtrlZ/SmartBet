@@ -39,8 +39,12 @@ $('body').on('click', '.fa-trash', function () {
 })
 
 $('body').on('click', '.calcOdds', function () {
-    const arr = $('.odds')
-    for (let i of arr) {
+    const arrResult = $('.result')
+    for(let j of arrResult){
+        $(j).empty()
+    }
+    const arrOdds = $('.odds')
+    for (let i of arrOdds) {
         if ($(i).val() !== '' && $(i).val() > 1) {
             const data = $(i).parent().text().split(' ')
             const num = parseFloat((data[data.length - 4]))

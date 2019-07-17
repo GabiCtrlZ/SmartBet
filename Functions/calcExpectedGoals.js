@@ -1,6 +1,6 @@
 let dataModels = require('../Mongoose/dataSchema')
 const calcExpectedGoals = async function (league, homeTeam, awayTeam) {
-    dataModels.updateModels()
+    await dataModels.updateModels()
     dataModels = require('../Mongoose/dataSchema')
     const allAvg = await dataModels[league].find({
         name: "allAvg"

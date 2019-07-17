@@ -13,7 +13,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    font-size: 2vw;
+    font-size: 1.2vw;
 }
 
 .list {
@@ -23,7 +23,7 @@ body {
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
     align-items: center;
-    background: rgba(17, 143, 32, 0.75);
+    background: #7cff92c7;
 }
 
 .league {
@@ -31,7 +31,7 @@ body {
 }
 
 .name {
-    background-color: grey;
+    background-color: #373640;
     color: white;
     font-size: 50px;
     display: grid;
@@ -42,7 +42,7 @@ body {
 .input {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #32ff6a;
+    background-color: #63686e;
     justify-items: center;
     align-items: center;
 }
@@ -99,19 +99,20 @@ body {
 
 .render {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
+    justify-content: center;
     align-items: center;
     padding: 20px;
-    grid-gap: 50px;
+    grid-gap: 20px;
 }
 
 .information {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    grid-gap: 10px;
+    grid-gap: 15px;
 }
 
 .label {
@@ -122,9 +123,15 @@ body {
     display: grid;
     justify-items: center;
     align-items: center;
-    background-color: rgb(92, 240, 109);
+    background-color: #7e97a6;
     box-shadow: 0px 0px 10px white;
     font-weight: bold;
     border-radius: 15px;
     padding: 15px;
+    width:85%;
+    height: 85%;
+    grid-gap: 15px;
+}
+div{
+    margin:0px;
 }

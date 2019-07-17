@@ -19,7 +19,6 @@ router.get('/try/:league', function (req, res) {
 router.post('/calc', async function (req, res) {
     const data = req.body
     const result = await calcExpectedGoals(data.league, data.homeTeam, data.awayTeam)
-    console.log(result)
     const arr = arrRusults(result)
     res.send(arr)
 })
@@ -48,10 +47,15 @@ router.get('/teams/:league', async function(req, res){
     res.send(leagueStuff.relevantTeams)
 })
 
-router.post(`admin/down/${Base64.encode(key)}`, function(req, res){
+router.post(`/admin/down/${Base64.encode(key)}`, function(req, res){
     const data = req.body
     downloadFunc(data.url, data.fileName)
     res.send('Downloaded')
 })
 
+router.get('/allTeams', async function(req, res){
+    const leagueStuff = await dataModels.Relevant.find({})
+    const arr = leagueStuff.map(x => x.name)
+    res.send(arr)
+})
 module.exports = router

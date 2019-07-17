@@ -52,3 +52,9 @@ $('body').on('click', '.calcOdds', function () {
     }
 })
 
+
+$.get('/allTeams' , function(res){
+    for(let i of res){
+        $('.list').append(`<div class="league">${i}</div>`)
+    }
+})

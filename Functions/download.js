@@ -1,15 +1,13 @@
 const download = require('download-file')
-
+const path = require('path')
 function downloadFunc(url, filename) {
-
     const options = {
-        directory: '../ExelData',
+        directory: path.join(__dirname, "/..", "/ExelData"),
         filename: `${filename}.csv`
     }
 
     download(url, options, function (err) {
         if (err) throw err
-        console.log("meow")
     })
 }
 

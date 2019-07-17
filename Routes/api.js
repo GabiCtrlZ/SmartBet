@@ -35,9 +35,9 @@ router.get(`/admin/up/${Base64.encode(key)}/:league`, async function (req, res) 
     res.send('wrong input')
 })
 
-router.post(`/admin/upTeams/${Base64.encode(key)}`, function (req, res) {
+router.post(`/admin/upTeams/${Base64.encode(key)}`, async function (req, res) {
     const data = req.body
-    updateTeams(data.league, JSON.parse(data.teamsArr))
+    await updateTeams(data.league, JSON.parse(data.teamsArr))
     return res.send('updated successfully')
 })
 
@@ -47,9 +47,9 @@ router.get('/teams/:league', async function(req, res){
     res.send(leagueStuff.relevantTeams)
 })
 
-router.post(`/admin/down/${Base64.encode(key)}`, function(req, res){
+router.post(`/admin/down/${Base64.encode(key)}`, async function(req, res){
     const data = req.body
-    downloadFunc(data.url, data.fileName)
+    await downloadFunc(data.url, data.fileName)
     res.send('Downloaded')
 })
 

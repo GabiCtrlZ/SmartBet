@@ -19,7 +19,7 @@ const relevantTeamsSchema = new Schema({
 const RelevantTeams = mongoose.model('RelevantTeams', relevantTeamsSchema)
 
 async function updateModels() {
-    let temp = {"Relevant": RelevantTeams, updateModels}
+    let temp = {"Relevant": RelevantTeams}
     const teams = await RelevantTeams.find({})
     for(let team of teams){
         temp[team.name] = mongoose.model(team.name, dataSchema, team.name)
@@ -28,4 +28,6 @@ async function updateModels() {
 }
 
 
-module.exports = {updateModels}
+module.exports = {"Relevant": RelevantTeams}
+
+updateModels()

@@ -38,6 +38,21 @@ $('body').on('click', '.fa-trash', function () {
     $('#awayTeam').val('')
 })
 
+$('body').on('click', '.calcOdds', function () {
+    const arr = $('.odds')
+    for (let i of arr) {
+        if ($(i).val() !== '' && $(i).val() > 1) {
+            const data = $(i).parent().text().split(' ')
+            const num = parseFloat((data[data.length - 4]))
+            const newOdd = $(i).val()
+            let result = (newOdd - 1) * (num / 100) - (1 - (num / 100))
+            result = result / (newOdd - 1)
+            $(i).parent().find('.result').html((result * 100).toFixed(2))
+        }
+    }
+})
+
+
 $.get('/allTeams' , function(res){
     for(let i of res){
         $('.list').append(`<div class="league">${i}</div>`)

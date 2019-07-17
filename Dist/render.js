@@ -61,7 +61,11 @@ const render = function (arr) {
                 <div>8 - ${(calculator.exact8(arr)).toFixed(2) + "%"} <input class="odds" type="number"> <span class="result"></span> </div>
             </div>
         </div>
-        <button class="calcOdds">calc</button>
+        <div class="card">
+            <a href="#" class="myButton calcOdds">My Chance</a>
+            <a class="myButton deleteButton"><i class="fas fa-trash"></i></a>
+        </div>
     </div>
     `)
 }
+//<button class="calcOdds">calc</button>

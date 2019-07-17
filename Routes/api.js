@@ -4,6 +4,7 @@ const router = express.Router()
 const update = require('../Functions/exep')
 const calcExpectedGoals = require('../Functions/calcExpectedGoals')
 const arrRusults = require('../Functions/arrResults')
+const Base64 = require('../Functions/base64')
 
 router.get('/try/:league', function (req, res) {
     const league = req.params.league
@@ -25,6 +26,13 @@ router.get('/admin/:league', function (req, res) {
     res.send('updated successfully')
 })
 
+router.get('/admintry', function(req, res){
+    const key = req.query.key 
+    if (key == Base64.encode('Kazoon')){
+        return res.sendFile(path.join(__dirname + '/..'+'/Admin/index.html'))
+    }
+    return res.send('sorry')
+})
 
 
 module.exports = router

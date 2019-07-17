@@ -17,10 +17,12 @@ $('body').on('click', '.button', function () {
         league: $(this).closest('.data').find('.name').text().replace(" ", "-")
     }
     $.post('/calc', data, function (res) {
+
         for (let i of res) {
             let div =
                 $('.data2').append(`<div class="chance">${i.chance.toFixed(5) + ' '} </div>`)
         }
+        render(res)
     })
 })
 

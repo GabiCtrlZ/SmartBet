@@ -134,8 +134,24 @@ class Calculator {
         }
         return sum
     }
-    biggerEqual6(arr) {
-        const result = arr.filter(a => (a.homeGoals + a.awayGoals >= 6))
+    exact6(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 6))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact7(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 7))
+        let sum = 0
+        for (let i of result) {
+            sum += i.chance
+        }
+        return sum
+    }
+    exact8(arr) {
+        const result = arr.filter(a => (a.homeGoals + a.awayGoals === 8))
         let sum = 0
         for (let i of result) {
             sum += i.chance

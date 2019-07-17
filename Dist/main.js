@@ -38,3 +38,8 @@ $('body').on('click', '.fa-trash', function () {
     $('#awayTeam').val('')
 })
 
+$.get('/allTeams' , function(res){
+    for(let i of res){
+        $('.list').append(i)
+    }
+})

@@ -5,7 +5,7 @@ html {
 body {
     margin: 0 auto;
     width: auto;
-    font-family: 'Quicksand', sans-serif;
+    font-family: sans-serif, 'Quicksand';
     background: url('https://images.unsplash.com/photo-1430232324554-8f4aebd06683?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80');
     height: 100%;
     background-position: center;
@@ -65,36 +65,19 @@ body {
 }
 
 .button {
-    width: 18vw;
-    height: 24px;
+    width: 20vw;
     border-radius: 15px;
     border: 0;
     box-shadow: 0px 0px 15px rgb(197, 197, 197);
     background-color: #0d3f67;
     color: wheat;
     outline: none;
+    height: 37px;
+    font-size: 1em;
 }
 
 .button:active {
     transform: translateY(2px);
-}
-
-#homeTeam {
-    width: 22vw;
-    height: 30px;
-    color: blue;
-    outline: none;
-    text-align: center;
-    font-weight: bold;
-}
-
-#awayTeam {
-    width: 22vw;
-    height: 30px;
-    color: crimson;
-    outline: none;
-    text-align: center;
-    font-weight: bold;
 }
 
 .render {
@@ -117,6 +100,7 @@ body {
 
 .label {
     color: white;
+    font-size: 1.4em;
 }
 
 .card {
@@ -128,7 +112,7 @@ body {
     font-weight: bold;
     border-radius: 15px;
     padding: 15px;
-    width:auto;
+    width:75%;
     height: 93%;
     grid-gap: 15px;
 }
@@ -139,15 +123,19 @@ div{
     border:none;
     outline: none;
     border-radius: 10px;
-    width: 150px;
+    height: 37px;
+    width: 200px;
     box-shadow: 0px 0px 5px wheat;
+    font-size: 1em;
 }
 #team2{
     border:none;
     outline: none;
     border-radius: 10px;
-    width: 150px;
+    width: 200px;
+    height: 37px;
     box-shadow: 0px 0px 5px wheat;
+    font-size: 1em;
 }
 input{
     border: none;
@@ -165,6 +153,9 @@ input{
 }
 
 .myButton {
+    width: 12vw;
+    height: 5vh;
+    text-align: center;
 	-moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
 	box-shadow:inset 0px 1px 0px 0px #fff6af;
@@ -183,10 +174,10 @@ input{
 	display:inline-block;
 	cursor:pointer;
 	color:#333333;
-	font-family:Arial;
-	font-size:15px;
+	font-family:Arial, sans-serif;
+    font-size:35px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:20px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffee66;
 }

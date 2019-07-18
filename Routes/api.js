@@ -8,6 +8,7 @@ const Base64 = require('../Functions/base64')
 const key = require('./key')
 const updateTeams = require('../Functions/updateTeams')
 const downloadFunc = require('../Functions/download')
+const deleteLeague = require('../Functions/daleteLeague')
 
 router.get('/try/:league', function (req, res) {
     const league = req.params.league
@@ -57,5 +58,10 @@ router.get('/allTeams', async function(req, res){
     const leagueStuff = await dataModels.Relevant.find({})
     const arr = leagueStuff.map(x => x.name)
     res.send(arr)
+})
+router.get(`/admin/del/${Base64.encode(key)}/:league`, async function(req, res){
+    const league = req.params.league
+    await deleteLeague(league)
+    return res.send('Deleted every thing from ' + league)
 })
 module.exports = router

@@ -45,6 +45,7 @@ body {
     background-color: #645555f5;
     justify-items: center;
     align-items: center;
+    padding: 10px;
 }
 
 .data2 {
@@ -175,7 +176,7 @@ input{
 	cursor:pointer;
 	color:#333333;
 	font-family:Arial, sans-serif;
-    font-size:35px;
+    font-size:30px;
 	font-weight:bold;
 	padding:20px 24px;
 	text-decoration:none;

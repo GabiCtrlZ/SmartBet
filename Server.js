@@ -12,9 +12,10 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/soccarDB' ,  { 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'distEnter')))
 app.use('/', api)
 app.use(`/admin/${Base64.encode(key)}`, express.static(path.join(__dirname, 'Admin')));
+app.use(`/main`, express.static(path.join(__dirname, 'Dist')));
 
 
 // The Server is Listning
